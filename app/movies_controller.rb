@@ -6,8 +6,8 @@
 # end                              # end
 
 def can_be_instantiated_and_then_saved
-  movie = Movie.new
-  movie.title = "This is a title."
+  movie = Movie.find_by(title:"Awesome Flick")
+  movie.update(title: "Even Awesomer Flick")
   movie.save
 end
 
